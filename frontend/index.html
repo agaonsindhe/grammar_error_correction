@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grammar Correction App</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div class="container">
+    <h1>Grammar Correction App</h1>
+
+    <!-- Manual Text Correction -->
+    <div class="section">
+        <h2>Correct Text</h2>
+        <textarea id="textInput" placeholder="Enter your text here..." rows="5"></textarea>
+        <button id="textSubmit">Correct Text</button>
+        <div id="textResult" class="result"></div>
+    </div>
+
+    <!-- File Upload Correction -->
+    <div class="section">
+        <h2>Correct a File</h2>
+        <input type="file" id="fileInput" accept=".txt">
+        <button id="fileSubmit">Upload File</button>
+        <div id="fileResult" class="result"></div>
+    </div>
+</div>
+
+<script src="js/app.js"></script>
+</body>
+</html>

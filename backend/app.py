@@ -95,14 +95,17 @@ def upload_file():
             corrected_content = language_tool_python.utils.correct(content, matches)
 
             # Save corrected content to a new file
-            corrected_filepath = filepath.replace(".txt", "_corrected.txt")
+            corrected_filename = filename.replace(".txt", "_corrected.txt")
+            corrected_filepath = os.path.join(app.config["UPLOAD_FOLDER"], corrected_filename)
             with open(corrected_filepath, "w") as f:
                 f.write(corrected_content)
 
             logger.info(f"File correction successful. Original: {filename}, Corrected: {corrected_filepath}")
+            # Return the URL for the corrected file
+            corrected_file_url = f"http://127.0.0.1:5000/uploaded_files/{corrected_filename}"
             return jsonify({
                 "original_file": filename,
-                "corrected_file": corrected_filepath,
+                "corrected_file_url": corrected_file_url,
                 "matches": len(matches),
             })
 
@@ -112,6 +115,13 @@ def upload_file():
     except Exception as e:
         logger.error(f"Error during file processing: {e}")
         return jsonify({"error": "An internal error occurred"}), 500
+
+
+from flask import send_from_directory
+
+@app.route("/uploaded_files/<filename>")
+def serve_file(filename):
+    return send_from_directory(app.config["UPLOAD_FOLDER"], filename)
 
 
 # Run the Flask app

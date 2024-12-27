@@ -39,19 +39,19 @@ document.addEventListener("DOMContentLoaded", () => {
             alert("Please select a file.");
             return;
         }
-
+    
         const formData = new FormData();
         formData.append("file", fileInput);
-
+    
         try {
             const response = await fetch("http://127.0.0.1:5000/upload_file", {
                 method: "POST",
                 body: formData,
             });
-
+    
             const result = await response.json();
             if (response.ok) {
-                fileResult.innerHTML = `Corrected file saved: <a href="${result.corrected_file}" download>Download Here</a>`;
+                fileResult.innerHTML = `Corrected file saved: <a href="${result.corrected_file_url}" target="_blank" download>Download Here</a>`;
                 fileResult.style.display = "block";
             } else {
                 alert(result.error || "An error occurred.");
@@ -61,4 +61,16 @@ document.addEventListener("DOMContentLoaded", () => {
             alert("Failed to connect to the server.");
         }
     });
+
+    function showAlert(message) {
+        const alertBox = document.getElementById("alertBox");
+        alertBox.textContent = message;
+        alertBox.style.display = "block";
+        setTimeout(() => (alertBox.style.display = "none"), 3000);
+    }
+    
+    // Example Usage
+    showAlert("Please select a valid file!");
+    
+    
 });

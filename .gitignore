@@ -1,2 +1,6 @@
 /backend/venv/*
 .idea
+app.log
+/backend/app.log
+/venv/
+/app.log

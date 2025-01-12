@@ -16,7 +16,7 @@ logging.basicConfig(
 logger = logging.getLogger()
 
 # Initialize Flask app
-app = Flask(__name__)
+app = Flask(__name__,static_folder='../static',template_folder='../static')
 CORS(app)  # Enable CORS for all routes
 
 # Configuration for file uploads
@@ -27,7 +27,7 @@ os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
 # Initialize the grammar correction model
 try:
-    MODEL_NAME = "thenHung/english-grammar-error-correction-t5-seq2seq"
+    MODEL_NAME = "agaonsindhe/grammar-error-correction-c2400m-t5-base"
     tokenizer = T5Tokenizer.from_pretrained(MODEL_NAME)
 
     model = AutoModelForSeq2SeqLM.from_pretrained(MODEL_NAME)
@@ -55,7 +55,7 @@ def correct_grammar(input_text):
 @app.route("/", methods=["GET"])
 def home():
     logger.info("Home endpoint accessed.")
-    return "Grammar Correction API is Running with Pretrained Models!"
+    return send_from_directory(app.static_folder,'index.html')
 
 # Endpoint to correct text input
 @app.route("/correct_text", methods=["POST"])

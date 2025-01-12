@@ -30,3 +30,35 @@ that match your environment. Please note that you may need to restart your runti
 2025-01-12 14:13:40,219 - INFO - 127.0.0.1 - - [12/Jan/2025 14:13:40] "OPTIONS /correct_text HTTP/1.1" 200 -
 2025-01-12 14:13:40,640 - INFO - Text correction successful.
 2025-01-12 14:13:40,640 - INFO - 127.0.0.1 - - [12/Jan/2025 14:13:40] "POST /correct_text HTTP/1.1" 200 -
+2025-01-12 23:22:09,338 - CRITICAL - Failed to initialize the pretrained model: 
+T5Tokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+2025-01-12 23:25:25,561 - INFO - Pretrained grammar correction model loaded successfully.
+2025-01-12 23:25:25,562 - INFO - Starting Flask server...
+2025-01-12 23:25:25,569 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-12 23:25:25,569 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-12 23:25:25,570 - INFO -  * Restarting with stat
+2025-01-12 23:25:29,245 - INFO - Pretrained grammar correction model loaded successfully.
+2025-01-12 23:25:29,246 - INFO - Starting Flask server...
+2025-01-12 23:25:29,251 - WARNING -  * Debugger is active!
+2025-01-12 23:25:29,257 - INFO -  * Debugger PIN: 102-639-565
+2025-01-12 23:25:49,018 - INFO - Home endpoint accessed.
+2025-01-12 23:25:49,022 - INFO - 127.0.0.1 - - [12/Jan/2025 23:25:49] "GET / HTTP/1.1" 200 -
+2025-01-12 23:25:49,040 - INFO - 127.0.0.1 - - [12/Jan/2025 23:25:49] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-01-12 23:25:49,043 - INFO - 127.0.0.1 - - [12/Jan/2025 23:25:49] "GET /static/js/app.js HTTP/1.1" 200 -
+2025-01-12 23:26:04,149 - INFO - Text correction successful.
+2025-01-12 23:26:04,149 - INFO - 127.0.0.1 - - [12/Jan/2025 23:26:04] "POST /correct_text HTTP/1.1" 200 -
+2025-01-12 23:26:35,800 - INFO - Text correction successful.
+2025-01-12 23:26:35,801 - INFO - 127.0.0.1 - - [12/Jan/2025 23:26:35] "POST /correct_text HTTP/1.1" 200 -
+2025-01-12 23:27:57,456 - INFO - Text correction successful.
+2025-01-12 23:27:57,456 - INFO - 127.0.0.1 - - [12/Jan/2025 23:27:57] "POST /correct_text HTTP/1.1" 200 -
+2025-01-12 23:28:27,756 - INFO - File correction successful. Original: advanced_grammar_errors.txt, Corrected: uploaded_files/advanced_grammar_errors_corrected.txt
+2025-01-12 23:28:27,757 - INFO - 127.0.0.1 - - [12/Jan/2025 23:28:27] "POST /upload_file HTTP/1.1" 200 -
+2025-01-12 23:28:31,920 - INFO - 127.0.0.1 - - [12/Jan/2025 23:28:31] "GET /uploaded_files/advanced_grammar_errors_corrected.txt HTTP/1.1" 200 -
+2025-01-12 23:29:22,799 - INFO - Text correction successful.
+2025-01-12 23:29:22,800 - INFO - 127.0.0.1 - - [12/Jan/2025 23:29:22] "POST /correct_text HTTP/1.1" 200 -
+2025-01-12 23:29:38,330 - INFO - Text correction successful.
+2025-01-12 23:29:38,330 - INFO - 127.0.0.1 - - [12/Jan/2025 23:29:38] "POST /correct_text HTTP/1.1" 200 -

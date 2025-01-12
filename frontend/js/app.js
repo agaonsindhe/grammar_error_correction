@@ -3,6 +3,14 @@ document.addEventListener("DOMContentLoaded", () => {
     const fileSubmit = document.getElementById("fileSubmit");
     const textResult = document.getElementById("textResult");
     const fileResult = document.getElementById("fileResult");
+    const fileInput = document.getElementById("fileInput");
+    const progressBar = document.getElementById("progressBar");
+
+    // Clear result when a new file is selected
+    fileInput.addEventListener("change", () => {
+        fileResult.style.display = "none"; // Hide the result
+        fileResult.innerHTML = ""; // Clear the content
+    });
 
     // Text Correction
     textSubmit.addEventListener("click", async () => {
@@ -34,21 +42,31 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // File Correction
     fileSubmit.addEventListener("click", async () => {
-        const fileInput = document.getElementById("fileInput").files[0];
-        if (!fileInput) {
+        const selectedFile = fileInput.files[0];
+        if (!selectedFile) {
             alert("Please select a file.");
             return;
         }
-    
+
+        if (selectedFile.type !== "text/plain") {
+            alert("Only .txt files are allowed!");
+            return;
+        }
+
+        // Clear previous results before uploading the new file
+        fileResult.style.display = "none";
+        fileResult.innerHTML = "";
+
         const formData = new FormData();
-        formData.append("file", fileInput);
-    
+        formData.append("file", selectedFile);
+
         try {
+            progressBar.style.display = "block"; // Show progress bar
             const response = await fetch("http://127.0.0.1:5000/upload_file", {
                 method: "POST",
                 body: formData,
             });
-    
+
             const result = await response.json();
             if (response.ok) {
                 fileResult.innerHTML = `Corrected file saved: <a href="${result.corrected_file_url}" target="_blank" download>Download Here</a>`;
@@ -59,6 +77,9 @@ document.addEventListener("DOMContentLoaded", () => {
         } catch (error) {
             console.error(error);
             alert("Failed to connect to the server.");
+        } finally {
+            progressBar.style.display = "none"; // Hide progress bar after processing
+            fileInput.value = ""; // Reset the file input
         }
     });
 
@@ -68,9 +89,4 @@ document.addEventListener("DOMContentLoaded", () => {
         alertBox.style.display = "block";
         setTimeout(() => (alertBox.style.display = "none"), 3000);
     }
-    
-    // Example Usage
-    showAlert("Please select a valid file!");
-    
-    
 });

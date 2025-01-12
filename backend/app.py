@@ -97,11 +97,17 @@ def upload_file():
             filepath = os.path.join(app.config["UPLOAD_FOLDER"], filename)
             file.save(filepath)
 
-            # Read and process the file
+            # Read and process the file line by line
+            corrected_lines = []
             with open(filepath, "r") as f:
-                content = f.read()
+                for line in f:
+                    line = line.strip()
+                    if line:  # Ignore empty lines
+                        corrected_line = correct_grammar(line)
+                        corrected_lines.append(corrected_line)
 
-            corrected_content = correct_grammar(content)
+            # Join corrected lines
+            corrected_content = "\n".join(corrected_lines)
 
             # Save corrected content to a new file
             corrected_filename = filename.replace(".txt", "_corrected.txt")
@@ -123,6 +129,7 @@ def upload_file():
     except Exception as e:
         logger.error(f"Error during file processing: {e}")
         return jsonify({"error": "An internal error occurred"}), 500
+
 
 from flask import send_from_directory
 

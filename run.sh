@@ -21,8 +21,8 @@ source venv/bin/activate
 
 # Step 3: Install dependencies
 echo "Installing dependencies..."
-pip install -r backend/requirements.txt
+pip install -r requirements.txt
 
 # Step 4: Run the Flask app and display output
 echo "Starting the Flask app..."
-PYTHONUNBUFFERED=1  python backend/app.py 2>&1
+PYTHONUNBUFFERED=1  python src/app.py 2>&1

@@ -75,17 +75,17 @@ cd grammar_error_correction
 
 ### **2. Create and Activate a Virtual Environment**
 ```bash
-python3 -m venv backend/venv-gca
-source backend/venv-gca/bin/activate
+python3 -m venv src/venv-gca
+source src/venv-gca/bin/activate
 ```
 
 ### **3. Install Backend Dependencies**
 ```bash
-pip install -r backend/requirements.txt
+pip install -r src/requirements.txt
 ```
 ### **4. run the application**
 ```bash
-python backend/src/app/py
+python src/src/app/py
 ```
 
 ## **Alternatively, you can run the run.sh:**
@@ -153,7 +153,7 @@ Open the `static/index.html` file in any modern browser to access the applicatio
 -Run pytest for backend tests:
 
 ```bash 
-pytest backend/test/
+pytest src/test/
 ```
 
 Dependencies
@@ -169,7 +169,7 @@ Dependencies
 
 Install them via:
 ```bash
-pip install -r backend/requirements.txt
+pip install -r src/requirements.txt
 ```
 
 ---

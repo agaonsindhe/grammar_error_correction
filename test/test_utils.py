@@ -1,5 +1,5 @@
 import pytest
-from backend.src.utils.file_utils import allowed_file, save_corrected_file
+from src.src.utils.file_utils import allowed_file, save_corrected_file
 
 def test_allowed_file():
     """

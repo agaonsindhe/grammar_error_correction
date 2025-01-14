@@ -1,6 +1,12 @@
-/backend/venv/*
+/src/venv/*
 .idea
 app.log
-/backend/app.log
+/src/app.log
 /venv/
 /app.log
+/screenshot&wrokflow.doc
+/screenshots.doc
+/screenshots.docx
+/task2.pdf
+/PartB.docx
+/Document1.docx

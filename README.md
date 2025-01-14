@@ -97,8 +97,8 @@ chmod +x run.sh
 ```
 
 ### **Open the Frontend**
-Open the `static/index.html` file in any modern browser to access the application.
-
+Open the `http://127.0.0.1:5000/index` file in any modern browser to access the application.
+    
 ---
 
 ## **How to Use**

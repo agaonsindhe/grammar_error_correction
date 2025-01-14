@@ -167,11 +167,6 @@ Dependencies
 - pytest 
 - pytest-flask
 
-Install them via:
-```bash
-pip install -r requirements.txt
-```
-
 ---
 
 ## **Logging**

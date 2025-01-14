@@ -25,4 +25,4 @@ pip install -r backend/requirements.txt
 
 # Step 4: Run the Flask app and display output
 echo "Starting the Flask app..."
-PYTHONUNBUFFERED=1  python backend/app.py 2>&1
+PYTHONUNBUFFERED=1  python backend/src/app.py 2>&1

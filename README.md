@@ -8,22 +8,32 @@ This project is a **Grammar Error Correction Application** designed to correct g
 
 ```
 grammar_error_correction/
-├── backend/
-│   ├── app.log                  # Log file for backend operations
-│   ├── app.py                   # Flask backend application
-│   ├── requirements.txt         # Backend Python dependencies
-│   ├── uploaded_files/          # Directory for storing uploaded and corrected files
+├── src/
+│   ├── app.py                     # Main Flask application
+│   ├── config.py                  # Configuration settings
+│   ├── utils/                     # Utility functions
+│   │   ├── file_utils.py          # File handling functions
+│   │   ├── grammar_utils.py       # Grammar correction functions
+│   │   └── __init__.py            # Module initializer
+│   ├── models/                    # Model loading and initialization
+│   │   ├── model_loader.py        # Logic for loading the grammar correction model
+│   │   └── __init__.py            # Module initializer
+├── test/
+│   ├── test_app.py                # Unit tests for Flask routes
+│   ├── test_utils.py              # Unit tests for utility functions
+│   ├── test_model_loader.py       # Unit tests for model loading
+│   └── __init__.py                # Module initializer
 ├── static/
 │   ├── css/
-│   │   └── style.css            # Stylesheet for frontend UI
+│   │   └── style.css              # Frontend styling
 │   ├── js/
-│   │   └── app.js               # JavaScript logic for frontend interactions
-│   └── index.html               # Frontend HTML file
-├── uploaded_files/              # Additional storage for file processing
-├── venv-gca/                    # Virtual environment for Python dependencies
-├── app.log                      # General log file
-├── run.sh                       # Script to start the backend server
-└── read.me                      # This README file
+│   │   └── app.js                 # Frontend logic
+│   └── index.html                 # Frontend HTML
+├── uploaded_files/                # Directory for storing user uploads and corrected files
+├── requirements.txt               # Python dependencies
+├── run.sh                         # Script to start the backend server
+├── README.md                      # Project documentation
+└── app.log                        # Log file
 ```
 
 ---
@@ -73,20 +83,20 @@ source backend/venv-gca/bin/activate
 ```bash
 pip install -r backend/requirements.txt
 ```
+### **4. run the application**
+```bash
+python backend/src/app/py
+```
 
-### **4. Start the Backend Server**
+## **Alternatively, you can run the run.sh:**
+### **1. run the sh to start backend server**
 Use the provided `run.sh` script:
 ```bash
 chmod +x run.sh
 ./run.sh
 ```
 
-Alternatively, you can start the server manually:
-```bash
-python backend/app.py
-```
-
-### **5. Open the Frontend**
+### **Open the Frontend**
 Open the `static/index.html` file in any modern browser to access the application.
 
 ---
@@ -139,12 +149,23 @@ Open the `static/index.html` file in any modern browser to access the applicatio
 
 ---
 
+### **Testing**
+-Run pytest for backend tests:
+
+```bash 
+pytest backend/test/
+```
+
+Dependencies
+
 ## **Dependencies**
 - Flask
 - Flask-CORS
 - Transformers
 - Torch
 - SentencePiece
+- pytest 
+- pytest-flask
 
 Install them via:
 ```bash

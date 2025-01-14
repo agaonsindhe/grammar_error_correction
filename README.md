@@ -169,13 +169,13 @@ Dependencies
 
 Install them via:
 ```bash
-pip install -r src/requirements.txt
+pip install -r requirements.txt
 ```
 
 ---
 
 ## **Logging**
-- Backend logs are written to `backend/app.log`.
+- Backend logs are written to `app.log`.
 
 ---
 

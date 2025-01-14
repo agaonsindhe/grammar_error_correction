@@ -1,5 +1,5 @@
 import pytest
-from src.app import app
+from backend.app import app
 
 @pytest.fixture
 def client():
@@ -15,7 +15,7 @@ def test_home(client):
     """
     Test the home route.
     """
-    response = client.get("/")
+    response = client.get("/index")
     assert response.status_code == 200
     assert b"<!DOCTYPE html>" in response.data  # Check if HTML content is returned
 
@@ -28,7 +28,7 @@ def test_correct_text(client):
     assert response.status_code == 200
     data = response.get_json()
     assert "corrected_text" in data
-    assert data["corrected_text"] == "I am a grammar problem."
+    assert data["corrected_text"] == "I have a grammar problem."
 
 
 def test_upload_file(client):
@@ -36,7 +36,7 @@ def test_upload_file(client):
     Test the `/upload_file` endpoint.
     """
     data = {
-        "file": (open("test/sample.txt", "rb"), "sample.txt")
+        "file": (open("uploaded_files/sample.txt", "rb"), "sample.txt")
     }
     response = client.post("/upload_file", data=data, content_type="multipart/form-data")
     assert response.status_code == 200

@@ -1,5 +1,7 @@
 import pytest
-from src.models.model_loader import load_model
+
+from backend.src.models.model_loader import load_model
+
 
 def test_load_model():
     """

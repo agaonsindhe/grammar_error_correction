@@ -89,9 +89,10 @@ async function correctFileUpload() {
             await new Promise((resolve) => setTimeout(resolve, 50)); // Simulated delay
         }
 
-        if(response.status===400)
+        if(response.status===400) {
             showModal("Invalid file type");
             return;
+        }
         if (!response.ok ) throw new Error("Failed to upload and correct file.");
 
         const data = await response.json();

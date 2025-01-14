@@ -3,10 +3,10 @@ import os
 from werkzeug.utils import secure_filename
 from flask import Flask, request, jsonify, send_from_directory,send_file
 from flask_cors import CORS
-from src.config import UPLOAD_FOLDER, ALLOWED_EXTENSIONS, MODEL_NAME
-from src.utils.file_utils import allowed_file, save_corrected_file
-from src.utils.grammar_utils import correct_grammar
-from src.models.model_loader import load_model
+from config import UPLOAD_FOLDER, ALLOWED_EXTENSIONS, MODEL_NAME
+from utils.file_utils import allowed_file, save_corrected_file
+from utils.grammar_utils import correct_grammar
+from models.model_loader import load_model
 
 # Configure logging
 logging.basicConfig(

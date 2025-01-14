@@ -1,5 +1,4 @@
 import os
-from warnings import catch_warnings
 
 
 def allowed_file(filename: str, allowed_extensions: set) -> bool:

@@ -50,6 +50,9 @@ grammar_error_correction/
   - Pre-trained on a large corpus and fine-tuned on a Kaggle dataset for grammar correction tasks.
   - Hosted on Hugging Face for reuse and deployment.
 
+### **Dataset**
+- The model was fine-tuned using the Kaggle dataset C4_200M Synthetic Dataset for Grammatical Error Correction.
+
 ---
 
 ## **Setup and Installation**

@@ -114,4 +114,4 @@ def serve_file(filename):
 
 if __name__ == "__main__":
     webbrowser.open("http://127.0.0.1:5000/index")
-    app.run(debug=True)
+    app.run(debug=True,use_reloader=False)

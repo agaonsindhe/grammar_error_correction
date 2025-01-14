@@ -1,4 +1,5 @@
 import logging
+import webbrowser
 import os
 from werkzeug.utils import secure_filename
 from flask import Flask, request, jsonify, send_from_directory,send_file
@@ -112,4 +113,5 @@ def serve_file(filename):
         return jsonify({"error": "File not found"}), 404
 
 if __name__ == "__main__":
+    webbrowser.open("http://127.0.0.1:5000/index")
     app.run(debug=True)

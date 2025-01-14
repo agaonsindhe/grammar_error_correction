@@ -51,7 +51,7 @@ grammar_error_correction/
   - Hosted on Hugging Face for reuse and deployment.
 
 ### **Dataset**
-- The model was fine-tuned using the Kaggle dataset C4_200M Synthetic Dataset for Grammatical Error Correction.
+- The model was fine-tuned using the Kaggle dataset [C4_200M Synthetic Dataset for Grammatical Error Correction](https://www.kaggle.com/datasets/a0155991rliwei/c4-200m).
 
 ---
 

@@ -153,7 +153,7 @@ Open the `http://127.0.0.1:5000/index` file in any modern browser to access the 
 -Run pytest for backend tests:
 
 ```bash 
-pytest src/test/
+pytest 
 ```
 
 Dependencies

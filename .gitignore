@@ -1,12 +1,4 @@
-/src/venv/*
+/backend/venv/*
 .idea
-app.log
-/src/app.log
-/venv/
-/app.log
-/screenshot&wrokflow.doc
-/screenshots.doc
-/screenshots.docx
-/task2.pdf
-/PartB.docx
-/Document1.docx
+backend/my_saved_model/*
+

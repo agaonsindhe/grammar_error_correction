@@ -1,0 +1,199 @@
+2025-01-12 14:05:12,968 - CRITICAL - Failed to initialize the pretrained model: Converting from Tiktoken failed, if a converter for SentencePiece is available, provide a model path with a SentencePiece tokenizer.model file.Currently available slow->fast convertors: ['AlbertTokenizer', 'BartTokenizer', 'BarthezTokenizer', 'BertTokenizer', 'BigBirdTokenizer', 'BlenderbotTokenizer', 'CamembertTokenizer', 'CLIPTokenizer', 'CodeGenTokenizer', 'ConvBertTokenizer', 'DebertaTokenizer', 'DebertaV2Tokenizer', 'DistilBertTokenizer', 'DPRReaderTokenizer', 'DPRQuestionEncoderTokenizer', 'DPRContextEncoderTokenizer', 'ElectraTokenizer', 'FNetTokenizer', 'FunnelTokenizer', 'GPT2Tokenizer', 'HerbertTokenizer', 'LayoutLMTokenizer', 'LayoutLMv2Tokenizer', 'LayoutLMv3Tokenizer', 'LayoutXLMTokenizer', 'LongformerTokenizer', 'LEDTokenizer', 'LxmertTokenizer', 'MarkupLMTokenizer', 'MBartTokenizer', 'MBart50Tokenizer', 'MPNetTokenizer', 'MobileBertTokenizer', 'MvpTokenizer', 'NllbTokenizer', 'OpenAIGPTTokenizer', 'PegasusTokenizer', 'Qwen2Tokenizer', 'RealmTokenizer', 'ReformerTokenizer', 'RemBertTokenizer', 'RetriBertTokenizer', 'RobertaTokenizer', 'RoFormerTokenizer', 'SeamlessM4TTokenizer', 'SqueezeBertTokenizer', 'T5Tokenizer', 'UdopTokenizer', 'WhisperTokenizer', 'XLMRobertaTokenizer', 'XLNetTokenizer', 'SplinterTokenizer', 'XGLMTokenizer', 'LlamaTokenizer', 'CodeLlamaTokenizer', 'GemmaTokenizer', 'Phi3Tokenizer']
+2025-01-12 14:06:39,095 - CRITICAL - Failed to initialize the pretrained model: Converting from Tiktoken failed, if a converter for SentencePiece is available, provide a model path with a SentencePiece tokenizer.model file.Currently available slow->fast convertors: ['AlbertTokenizer', 'BartTokenizer', 'BarthezTokenizer', 'BertTokenizer', 'BigBirdTokenizer', 'BlenderbotTokenizer', 'CamembertTokenizer', 'CLIPTokenizer', 'CodeGenTokenizer', 'ConvBertTokenizer', 'DebertaTokenizer', 'DebertaV2Tokenizer', 'DistilBertTokenizer', 'DPRReaderTokenizer', 'DPRQuestionEncoderTokenizer', 'DPRContextEncoderTokenizer', 'ElectraTokenizer', 'FNetTokenizer', 'FunnelTokenizer', 'GPT2Tokenizer', 'HerbertTokenizer', 'LayoutLMTokenizer', 'LayoutLMv2Tokenizer', 'LayoutLMv3Tokenizer', 'LayoutXLMTokenizer', 'LongformerTokenizer', 'LEDTokenizer', 'LxmertTokenizer', 'MarkupLMTokenizer', 'MBartTokenizer', 'MBart50Tokenizer', 'MPNetTokenizer', 'MobileBertTokenizer', 'MvpTokenizer', 'NllbTokenizer', 'OpenAIGPTTokenizer', 'PegasusTokenizer', 'Qwen2Tokenizer', 'RealmTokenizer', 'ReformerTokenizer', 'RemBertTokenizer', 'RetriBertTokenizer', 'RobertaTokenizer', 'RoFormerTokenizer', 'SeamlessM4TTokenizer', 'SqueezeBertTokenizer', 'T5Tokenizer', 'UdopTokenizer', 'WhisperTokenizer', 'XLMRobertaTokenizer', 'XLNetTokenizer', 'SplinterTokenizer', 'XGLMTokenizer', 'LlamaTokenizer', 'CodeLlamaTokenizer', 'GemmaTokenizer', 'Phi3Tokenizer']
+2025-01-12 14:07:57,462 - CRITICAL - Failed to initialize the pretrained model: 
+T5Tokenizer requires the SentencePiece library but it was not found in your environment. Checkout the instructions on the
+installation page of its repo: https://github.com/google/sentencepiece#installation and follow the ones
+that match your environment. Please note that you may need to restart your runtime after installation.
+
+2025-01-12 14:10:21,233 - INFO - Pretrained grammar correction model loaded successfully.
+2025-01-12 14:10:21,235 - INFO - Starting Flask server...
+2025-01-12 14:10:21,243 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-12 14:10:21,243 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-12 14:10:21,244 - INFO -  * Restarting with stat
+2025-01-12 14:10:25,968 - INFO - Pretrained grammar correction model loaded successfully.
+2025-01-12 14:10:25,970 - INFO - Starting Flask server...
+2025-01-12 14:10:25,972 - WARNING -  * Debugger is active!
+2025-01-12 14:10:25,978 - INFO -  * Debugger PIN: 955-064-616
+2025-01-12 14:12:09,598 - INFO - 127.0.0.1 - - [12/Jan/2025 14:12:09] "OPTIONS /correct_text HTTP/1.1" 200 -
+2025-01-12 14:12:09,913 - INFO - Text correction successful.
+2025-01-12 14:12:09,913 - INFO - 127.0.0.1 - - [12/Jan/2025 14:12:09] "POST /correct_text HTTP/1.1" 200 -
+2025-01-12 14:13:00,591 - INFO - 127.0.0.1 - - [12/Jan/2025 14:13:00] "OPTIONS /correct_text HTTP/1.1" 200 -
+2025-01-12 14:13:00,913 - INFO - Text correction successful.
+2025-01-12 14:13:00,913 - INFO - 127.0.0.1 - - [12/Jan/2025 14:13:00] "POST /correct_text HTTP/1.1" 200 -
+2025-01-12 14:13:11,567 - INFO - 127.0.0.1 - - [12/Jan/2025 14:13:11] "OPTIONS /correct_text HTTP/1.1" 200 -
+2025-01-12 14:13:11,893 - INFO - Text correction successful.
+2025-01-12 14:13:11,893 - INFO - 127.0.0.1 - - [12/Jan/2025 14:13:11] "POST /correct_text HTTP/1.1" 200 -
+2025-01-12 14:13:29,263 - INFO - 127.0.0.1 - - [12/Jan/2025 14:13:29] "OPTIONS /correct_text HTTP/1.1" 200 -
+2025-01-12 14:13:29,595 - INFO - Text correction successful.
+2025-01-12 14:13:29,595 - INFO - 127.0.0.1 - - [12/Jan/2025 14:13:29] "POST /correct_text HTTP/1.1" 200 -
+2025-01-12 14:13:40,219 - INFO - 127.0.0.1 - - [12/Jan/2025 14:13:40] "OPTIONS /correct_text HTTP/1.1" 200 -
+2025-01-12 14:13:40,640 - INFO - Text correction successful.
+2025-01-12 14:13:40,640 - INFO - 127.0.0.1 - - [12/Jan/2025 14:13:40] "POST /correct_text HTTP/1.1" 200 -
+2025-01-12 15:51:03,020 - INFO - Pretrained grammar correction model loaded successfully.
+2025-01-12 15:51:03,031 - INFO - Starting Flask server...
+2025-01-12 15:51:03,035 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-12 15:51:03,035 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-12 15:51:03,035 - INFO -  * Restarting with stat
+2025-01-12 15:51:08,147 - INFO - Pretrained grammar correction model loaded successfully.
+2025-01-12 15:51:08,150 - INFO - Starting Flask server...
+2025-01-12 15:51:08,153 - WARNING -  * Debugger is active!
+2025-01-12 15:51:08,168 - INFO -  * Debugger PIN: 221-269-648
+2025-01-12 15:52:07,601 - INFO - 127.0.0.1 - - [12/Jan/2025 15:52:07] "OPTIONS /correct_text HTTP/1.1" 200 -
+2025-01-12 15:52:08,144 - INFO - Text correction successful.
+2025-01-12 15:52:08,145 - INFO - 127.0.0.1 - - [12/Jan/2025 15:52:08] "POST /correct_text HTTP/1.1" 200 -
+2025-01-12 15:52:22,467 - INFO - 127.0.0.1 - - [12/Jan/2025 15:52:22] "OPTIONS /correct_text HTTP/1.1" 200 -
+2025-01-12 15:52:23,007 - INFO - Text correction successful.
+2025-01-12 15:52:23,008 - INFO - 127.0.0.1 - - [12/Jan/2025 15:52:23] "POST /correct_text HTTP/1.1" 200 -
+2025-01-12 15:52:39,603 - INFO - File correction successful. Original: sentence_fragments.txt, Corrected: uploaded_files/sentence_fragments_corrected.txt
+2025-01-12 15:52:39,604 - INFO - 127.0.0.1 - - [12/Jan/2025 15:52:39] "POST /upload_file HTTP/1.1" 200 -
+2025-01-12 15:52:41,604 - INFO - 127.0.0.1 - - [12/Jan/2025 15:52:41] "GET /uploaded_files/sentence_fragments_corrected.txt HTTP/1.1" 200 -
+2025-01-12 15:52:41,827 - INFO - 127.0.0.1 - - [12/Jan/2025 15:52:41] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-01-12 15:57:55,995 - INFO - 127.0.0.1 - - [12/Jan/2025 15:57:55] "[36mGET /uploaded_files/sentence_fragments_corrected.txt HTTP/1.1[0m" 304 -
+2025-01-12 15:58:07,211 - INFO - File correction successful. Original: advanced_grammar_errors.txt, Corrected: uploaded_files/advanced_grammar_errors_corrected.txt
+2025-01-12 15:58:07,211 - INFO - 127.0.0.1 - - [12/Jan/2025 15:58:07] "POST /upload_file HTTP/1.1" 200 -
+2025-01-12 15:58:08,849 - INFO - 127.0.0.1 - - [12/Jan/2025 15:58:08] "GET /uploaded_files/advanced_grammar_errors_corrected.txt HTTP/1.1" 200 -
+2025-01-12 15:59:00,485 - INFO - File correction successful. Original: advanced_grammar_errors.txt, Corrected: uploaded_files/advanced_grammar_errors_corrected.txt
+2025-01-12 15:59:00,485 - INFO - 127.0.0.1 - - [12/Jan/2025 15:59:00] "POST /upload_file HTTP/1.1" 200 -
+2025-01-12 15:59:02,705 - INFO - 127.0.0.1 - - [12/Jan/2025 15:59:02] "GET /uploaded_files/advanced_grammar_errors_corrected.txt HTTP/1.1" 200 -
+2025-01-12 16:15:26,455 - INFO -  * Detected change in '/home/agaonsindhe/Desktop/codebase/nlp_applications_assignment_one/backend/use_model.py', reloading
+2025-01-12 16:15:27,373 - INFO -  * Restarting with stat
+2025-01-12 16:15:33,123 - INFO - Pretrained grammar correction model loaded successfully.
+2025-01-12 16:15:33,125 - INFO - Starting Flask server...
+2025-01-12 16:15:33,131 - WARNING -  * Debugger is active!
+2025-01-12 16:15:33,135 - INFO -  * Debugger PIN: 221-269-648
+2025-01-12 16:16:12,997 - INFO -  * Detected change in '/home/agaonsindhe/Desktop/codebase/nlp_applications_assignment_one/backend/app.py', reloading
+2025-01-12 16:16:13,680 - INFO -  * Restarting with stat
+2025-01-12 16:16:16,467 - INFO - Pretrained grammar correction model loaded successfully.
+2025-01-12 16:16:16,468 - INFO - Starting Flask server...
+2025-01-12 16:16:16,472 - WARNING -  * Debugger is active!
+2025-01-12 16:16:16,475 - INFO -  * Debugger PIN: 221-269-648
+2025-01-12 16:16:36,107 - INFO - 127.0.0.1 - - [12/Jan/2025 16:16:36] "[33mGET /index.html HTTP/1.1[0m" 404 -
+2025-01-12 16:16:49,108 - INFO - 127.0.0.1 - - [12/Jan/2025 16:16:49] "OPTIONS /correct_text HTTP/1.1" 200 -
+2025-01-12 16:16:49,683 - INFO - Text correction successful.
+2025-01-12 16:16:49,684 - INFO - 127.0.0.1 - - [12/Jan/2025 16:16:49] "POST /correct_text HTTP/1.1" 200 -
+2025-01-12 16:16:59,769 - INFO - 127.0.0.1 - - [12/Jan/2025 16:16:59] "OPTIONS /correct_text HTTP/1.1" 200 -
+2025-01-12 16:17:00,293 - INFO - Text correction successful.
+2025-01-12 16:17:00,294 - INFO - 127.0.0.1 - - [12/Jan/2025 16:17:00] "POST /correct_text HTTP/1.1" 200 -
+2025-01-12 16:17:13,877 - INFO - 127.0.0.1 - - [12/Jan/2025 16:17:13] "OPTIONS /correct_text HTTP/1.1" 200 -
+2025-01-12 16:17:14,465 - INFO - Text correction successful.
+2025-01-12 16:17:14,466 - INFO - 127.0.0.1 - - [12/Jan/2025 16:17:14] "POST /correct_text HTTP/1.1" 200 -
+2025-01-12 16:17:41,118 - INFO - 127.0.0.1 - - [12/Jan/2025 16:17:41] "OPTIONS /correct_text HTTP/1.1" 200 -
+2025-01-12 16:17:41,784 - INFO - Text correction successful.
+2025-01-12 16:17:41,786 - INFO - 127.0.0.1 - - [12/Jan/2025 16:17:41] "POST /correct_text HTTP/1.1" 200 -
+2025-01-12 16:18:17,063 - INFO - 127.0.0.1 - - [12/Jan/2025 16:18:17] "OPTIONS /correct_text HTTP/1.1" 200 -
+2025-01-12 16:18:17,861 - INFO - Text correction successful.
+2025-01-12 16:18:17,862 - INFO - 127.0.0.1 - - [12/Jan/2025 16:18:17] "POST /correct_text HTTP/1.1" 200 -
+2025-01-12 16:29:14,410 - INFO - 127.0.0.1 - - [12/Jan/2025 16:29:14] "OPTIONS /correct_text HTTP/1.1" 200 -
+2025-01-12 16:29:15,273 - INFO - Text correction successful.
+2025-01-12 16:29:15,274 - INFO - 127.0.0.1 - - [12/Jan/2025 16:29:15] "POST /correct_text HTTP/1.1" 200 -
+2025-01-12 16:29:27,936 - INFO - File correction successful. Original: advanced_grammar_errors.txt, Corrected: uploaded_files/advanced_grammar_errors_corrected.txt
+2025-01-12 16:29:27,937 - INFO - 127.0.0.1 - - [12/Jan/2025 16:29:27] "POST /upload_file HTTP/1.1" 200 -
+2025-01-12 16:29:30,729 - INFO - 127.0.0.1 - - [12/Jan/2025 16:29:30] "GET /uploaded_files/advanced_grammar_errors_corrected.txt HTTP/1.1" 200 -
+2025-01-12 16:29:48,973 - INFO - File correction successful. Original: sentence_fragments.txt, Corrected: uploaded_files/sentence_fragments_corrected.txt
+2025-01-12 16:29:48,973 - INFO - 127.0.0.1 - - [12/Jan/2025 16:29:48] "POST /upload_file HTTP/1.1" 200 -
+2025-01-12 16:29:58,996 - INFO - File correction successful. Original: advanced_grammar_errors.txt, Corrected: uploaded_files/advanced_grammar_errors_corrected.txt
+2025-01-12 16:29:58,997 - INFO - 127.0.0.1 - - [12/Jan/2025 16:29:58] "POST /upload_file HTTP/1.1" 200 -
+2025-01-12 16:32:33,705 - INFO -  * Detected change in '/home/agaonsindhe/Desktop/codebase/nlp_applications_assignment_one/backend/app.py', reloading
+2025-01-12 16:32:34,601 - INFO -  * Restarting with stat
+2025-01-12 16:32:37,830 - INFO - Pretrained grammar correction model loaded successfully.
+2025-01-12 16:32:37,832 - INFO - Starting Flask server...
+2025-01-12 16:32:37,835 - WARNING -  * Debugger is active!
+2025-01-12 16:32:37,839 - INFO -  * Debugger PIN: 221-269-648
+2025-01-12 16:40:21,356 - INFO -  * Detected change in '/home/agaonsindhe/Desktop/codebase/nlp_applications_assignment_one/backend/app.py', reloading
+2025-01-12 16:40:22,099 - INFO -  * Restarting with stat
+2025-01-12 16:40:24,945 - INFO - Pretrained grammar correction model loaded successfully.
+2025-01-12 16:40:24,947 - INFO - Starting Flask server...
+2025-01-12 16:40:24,950 - WARNING -  * Debugger is active!
+2025-01-12 16:40:24,952 - INFO -  * Debugger PIN: 221-269-648
+2025-01-12 16:40:35,199 - INFO -  * Detected change in '/home/agaonsindhe/Desktop/codebase/nlp_applications_assignment_one/backend/app.py', reloading
+2025-01-12 16:40:36,285 - INFO -  * Restarting with stat
+2025-01-12 16:40:39,228 - INFO - Pretrained grammar correction model loaded successfully.
+2025-01-12 16:40:39,230 - INFO - Starting Flask server...
+2025-01-12 16:40:39,236 - WARNING -  * Debugger is active!
+2025-01-12 16:40:39,240 - INFO -  * Debugger PIN: 221-269-648
+2025-01-12 16:40:54,588 - INFO -  * Detected change in '/home/agaonsindhe/Desktop/codebase/nlp_applications_assignment_one/backend/app.py', reloading
+2025-01-12 16:40:55,323 - INFO -  * Restarting with stat
+2025-01-12 16:40:58,291 - INFO - Pretrained grammar correction model loaded successfully.
+2025-01-12 16:40:58,293 - INFO - Starting Flask server...
+2025-01-12 16:40:58,297 - WARNING -  * Debugger is active!
+2025-01-12 16:40:58,300 - INFO -  * Debugger PIN: 221-269-648
+2025-01-12 16:41:20,674 - INFO - 127.0.0.1 - - [12/Jan/2025 16:41:20] "GET / HTTP/1.1" 200 -
+2025-01-12 16:41:20,693 - INFO - 127.0.0.1 - - [12/Jan/2025 16:41:20] "[33mGET /css/style.css HTTP/1.1[0m" 404 -
+2025-01-12 16:41:20,699 - INFO - 127.0.0.1 - - [12/Jan/2025 16:41:20] "[33mGET /js/app.js HTTP/1.1[0m" 404 -
+2025-01-12 16:41:20,715 - INFO - 127.0.0.1 - - [12/Jan/2025 16:41:20] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-01-12 16:42:19,764 - INFO - 127.0.0.1 - - [12/Jan/2025 16:42:19] "[36mGET / HTTP/1.1[0m" 304 -
+2025-01-12 16:42:19,772 - INFO - 127.0.0.1 - - [12/Jan/2025 16:42:19] "[33mGET /css/style.css HTTP/1.1[0m" 404 -
+2025-01-12 16:42:19,772 - INFO - 127.0.0.1 - - [12/Jan/2025 16:42:19] "[33mGET /js/app.js HTTP/1.1[0m" 404 -
+2025-01-12 16:42:24,426 - INFO - 127.0.0.1 - - [12/Jan/2025 16:42:24] "[33mGET /css/style.css HTTP/1.1[0m" 404 -
+2025-01-12 16:45:38,579 - INFO -  * Detected change in '/home/agaonsindhe/Desktop/codebase/nlp_applications_assignment_one/backend/app.py', reloading
+2025-01-12 16:45:39,277 - INFO -  * Restarting with stat
+2025-01-12 16:45:42,090 - INFO - Pretrained grammar correction model loaded successfully.
+2025-01-12 16:45:42,091 - INFO - Starting Flask server...
+2025-01-12 16:45:42,095 - WARNING -  * Debugger is active!
+2025-01-12 16:45:42,097 - INFO -  * Debugger PIN: 221-269-648
+2025-01-12 16:52:25,156 - INFO - 127.0.0.1 - - [12/Jan/2025 16:52:25] "[33mGET / HTTP/1.1[0m" 404 -
+2025-01-12 16:52:30,076 - INFO - 127.0.0.1 - - [12/Jan/2025 16:52:30] "[33mGET / HTTP/1.1[0m" 404 -
+2025-01-12 17:12:09,553 - INFO - 127.0.0.1 - - [12/Jan/2025 17:12:09] "OPTIONS /correct_text HTTP/1.1" 200 -
+2025-01-12 17:12:10,218 - INFO - Text correction successful.
+2025-01-12 17:12:10,219 - INFO - 127.0.0.1 - - [12/Jan/2025 17:12:10] "POST /correct_text HTTP/1.1" 200 -
+2025-01-12 17:18:08,523 - INFO - File correction successful. Original: advanced_grammar_errors.txt, Corrected: uploaded_files/advanced_grammar_errors_corrected.txt
+2025-01-12 17:18:08,524 - INFO - 127.0.0.1 - - [12/Jan/2025 17:18:08] "POST /upload_file HTTP/1.1" 200 -
+2025-01-12 17:25:40,677 - INFO -  * Detected change in '/home/agaonsindhe/Desktop/codebase/nlp_applications_assignment_one/backend/venv/lib/python3.12/site-packages/torch/_ops.py', reloading
+2025-01-12 17:25:41,481 - INFO -  * Restarting with stat
+2025-01-12 17:25:44,878 - INFO - Pretrained grammar correction model loaded successfully.
+2025-01-12 17:25:44,880 - INFO - Starting Flask server...
+2025-01-12 17:25:44,885 - WARNING -  * Debugger is active!
+2025-01-12 17:25:44,887 - INFO -  * Debugger PIN: 221-269-648
+2025-01-12 17:26:07,448 - INFO - Pretrained grammar correction model loaded successfully.
+2025-01-12 17:26:07,449 - INFO - Starting Flask server...
+2025-01-12 17:26:07,455 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-12 17:26:07,456 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-12 17:26:07,457 - INFO -  * Restarting with stat
+2025-01-12 17:26:10,346 - INFO - Pretrained grammar correction model loaded successfully.
+2025-01-12 17:26:10,348 - INFO - Starting Flask server...
+2025-01-12 17:26:10,354 - WARNING -  * Debugger is active!
+2025-01-12 17:26:10,358 - INFO -  * Debugger PIN: 221-269-648
+2025-01-12 17:26:26,853 - INFO - 127.0.0.1 - - [12/Jan/2025 17:26:26] "GET / HTTP/1.1" 200 -
+2025-01-12 17:26:26,864 - INFO - 127.0.0.1 - - [12/Jan/2025 17:26:26] "[33mGET /css/style.css HTTP/1.1[0m" 404 -
+2025-01-12 17:26:26,871 - INFO - 127.0.0.1 - - [12/Jan/2025 17:26:26] "[33mGET /js/app.js HTTP/1.1[0m" 404 -
+2025-01-12 17:26:29,899 - INFO - 127.0.0.1 - - [12/Jan/2025 17:26:29] "[33mGET /css/style.css HTTP/1.1[0m" 404 -
+2025-01-12 17:26:53,219 - INFO - 127.0.0.1 - - [12/Jan/2025 17:26:53] "[33mGET /css/style.css HTTP/1.1[0m" 404 -
+2025-01-12 17:27:05,251 - INFO - 127.0.0.1 - - [12/Jan/2025 17:27:05] "[33mGET /css/style.css HTTP/1.1[0m" 404 -
+2025-01-12 17:27:37,498 - INFO - 127.0.0.1 - - [12/Jan/2025 17:27:37] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-01-12 17:28:12,452 - INFO - 127.0.0.1 - - [12/Jan/2025 17:28:12] "[36mGET / HTTP/1.1[0m" 304 -
+2025-01-12 17:28:12,460 - INFO - 127.0.0.1 - - [12/Jan/2025 17:28:12] "[33mGET /css/style.css HTTP/1.1[0m" 404 -
+2025-01-12 17:28:12,461 - INFO - 127.0.0.1 - - [12/Jan/2025 17:28:12] "[33mGET /js/app.js HTTP/1.1[0m" 404 -
+2025-01-12 17:32:17,940 - INFO -  * Detected change in '/home/agaonsindhe/Desktop/codebase/nlp_applications_assignment_one/backend/app.py', reloading
+2025-01-12 17:32:18,674 - INFO -  * Restarting with stat
+2025-01-12 17:32:21,537 - INFO - Pretrained grammar correction model loaded successfully.
+2025-01-12 17:32:21,538 - INFO - Starting Flask server...
+2025-01-12 17:32:21,542 - WARNING -  * Debugger is active!
+2025-01-12 17:32:21,544 - INFO -  * Debugger PIN: 221-269-648
+2025-01-12 17:32:37,061 - INFO - 127.0.0.1 - - [12/Jan/2025 17:32:37] "[33mGET / HTTP/1.1[0m" 404 -
+2025-01-12 17:32:46,103 - INFO -  * Detected change in '/home/agaonsindhe/Desktop/codebase/nlp_applications_assignment_one/backend/app.py', reloading
+2025-01-12 17:32:46,859 - INFO -  * Restarting with stat
+2025-01-12 17:32:49,799 - INFO - Pretrained grammar correction model loaded successfully.
+2025-01-12 17:32:49,800 - INFO - Starting Flask server...
+2025-01-12 17:32:49,803 - WARNING -  * Debugger is active!
+2025-01-12 17:32:49,806 - INFO -  * Debugger PIN: 221-269-648
+2025-01-12 17:32:49,836 - INFO - 127.0.0.1 - - [12/Jan/2025 17:32:49] "GET / HTTP/1.1" 200 -
+2025-01-12 17:32:49,845 - INFO - 127.0.0.1 - - [12/Jan/2025 17:32:49] "[33mGET /css/style.css HTTP/1.1[0m" 404 -
+2025-01-12 17:32:49,846 - INFO - 127.0.0.1 - - [12/Jan/2025 17:32:49] "[33mGET /js/app.js HTTP/1.1[0m" 404 -
+2025-01-12 17:33:16,858 - INFO - 127.0.0.1 - - [12/Jan/2025 17:33:16] "GET / HTTP/1.1" 200 -
+2025-01-12 17:33:16,874 - INFO - 127.0.0.1 - - [12/Jan/2025 17:33:16] "GET /static/js/app.js HTTP/1.1" 200 -
+2025-01-12 17:33:16,874 - INFO - 127.0.0.1 - - [12/Jan/2025 17:33:16] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-01-12 17:33:37,051 - INFO - Text correction successful.
+2025-01-12 17:33:37,052 - INFO - 127.0.0.1 - - [12/Jan/2025 17:33:37] "POST /correct_text HTTP/1.1" 200 -
+2025-01-12 18:06:49,980 - INFO - Pretrained grammar correction model loaded successfully.
+2025-01-12 18:06:49,982 - INFO - Starting Flask server...
+2025-01-12 18:06:49,989 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-01-12 18:06:49,989 - INFO - [33mPress CTRL+C to quit[0m
+2025-01-12 18:06:49,990 - INFO -  * Restarting with stat
+2025-01-12 18:06:52,451 - INFO - Pretrained grammar correction model loaded successfully.
+2025-01-12 18:06:52,452 - INFO - Starting Flask server...
+2025-01-12 18:06:52,456 - WARNING -  * Debugger is active!
+2025-01-12 18:06:52,461 - INFO -  * Debugger PIN: 134-334-456

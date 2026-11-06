@@ -73,20 +73,20 @@ source backend/venv-gca/bin/activate
 ```bash
 pip install -r backend/requirements.txt
 ```
+### **4. run the application**
+```bash
+python backend/src/app/py
+```
 
-### **4. Start the Backend Server**
+## **Alternatively, you can run the run.sh:**
+### **1. run the sh to start backend server**
 Use the provided `run.sh` script:
 ```bash
 chmod +x run.sh
 ./run.sh
 ```
 
-Alternatively, you can start the server manually:
-```bash
-python backend/app.py
-```
-
-### **5. Open the Frontend**
+### **Open the Frontend**
 Open the `static/index.html` file in any modern browser to access the application.
 
 ---
@@ -139,12 +139,23 @@ Open the `static/index.html` file in any modern browser to access the applicatio
 
 ---
 
+### **Testing**
+-Run pytest for backend tests:
+
+```bash 
+pytest backend/test/
+```
+
+Dependencies
+
 ## **Dependencies**
 - Flask
 - Flask-CORS
 - Transformers
 - Torch
 - SentencePiece
+- pytest 
+- pytest-flask
 
 Install them via:
 ```bash
